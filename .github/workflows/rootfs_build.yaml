@@ -145,6 +145,7 @@ jobs:
           sudo buildrootfs
           
           ls -lasih /var/cache/manjaro-arm-tools/img
+          ls /usr/share/manjaro-arm-tools/
           
           FILE_PATH=$(find /var/cache/manjaro-arm-tools/img -type f -name "*.tar.gz" -exec stat -c '%Y %n' {} \; | sort -nr | awk 'NR==1 {print $2}')
           cp -v $FILE_PATH .
